@@ -1,5 +1,5 @@
 import { BriefcaseIcon, FacebookIcon, TwitterIcon, LinkedinIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -33,16 +33,16 @@ export function Footer() {
             <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/jobs/find" className="hover:text-blue-500">Find Jobs</Link>
+                <Link href="/jobs/find" className="hover:text-blue-500">Find Jobs</Link>
               </li>
               <li>
-                <Link to="/companies" className="hover:text-blue-500">Companies</Link>
+                <Link href="/companies" className="hover:text-blue-500">Companies</Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-blue-500">About Us</Link>
+                <Link href="/about" className="hover:text-blue-500">About Us</Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-blue-500">Contact</Link>
+                <Link href="/contact" className="hover:text-blue-500">Contact</Link>
               </li>
             </ul>
           </div>
@@ -52,16 +52,16 @@ export function Footer() {
             <h3 className="mb-4 text-lg font-semibold text-white">For Job Seekers</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/register" className="hover:text-blue-500">Create Account</Link>
+                <Link href="/register" className="hover:text-blue-500">Create Account</Link>
               </li>
               <li>
-                <Link to="/profile" className="hover:text-blue-500">Upload Resume</Link>
+                <Link href="/profile" className="hover:text-blue-500">Upload Resume</Link>
               </li>
               <li>
-                <Link to="/jobs/find" className="hover:text-blue-500">Job Search</Link>
+                <Link href="/jobs/find" className="hover:text-blue-500">Job Search</Link>
               </li>
               <li>
-                <Link to="/faq" className="hover:text-blue-500">FAQ</Link>
+                <Link href="/faq" className="hover:text-blue-500">FAQ</Link>
               </li>
             </ul>
           </div>
@@ -71,16 +71,16 @@ export function Footer() {
             <h3 className="mb-4 text-lg font-semibold text-white">For Employers</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/register" className="hover:text-blue-500">Post a Job</Link>
+                <Link href="/register" className="hover:text-blue-500">Post a Job</Link>
               </li>
               <li>
-                <Link to="/pricing" className="hover:text-blue-500">Pricing</Link>
+                <Link href="/pricing" className="hover:text-blue-500">Pricing</Link>
               </li>
               <li>
-                <Link to="/resources" className="hover:text-blue-500">Resources</Link>
+                <Link href="/resources" className="hover:text-blue-500">Resources</Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-blue-500">Contact Sales</Link>
+                <Link href="/contact" className="hover:text-blue-500">Contact Sales</Link>
               </li>
             </ul>
           </div>
@@ -90,9 +90,9 @@ export function Footer() {
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col items-center justify-between space-y-4 text-sm md:flex-row md:space-y-0">
             <div className="flex space-x-4">
-              <Link to="/privacy" className="hover:text-blue-500">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-blue-500">Terms of Service</Link>
-              <Link to="/cookies" className="hover:text-blue-500">Cookie Policy</Link>
+              <Link href="/privacy" className="hover:text-blue-500">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-blue-500">Terms of Service</Link>
+              <Link href="/cookies" className="hover:text-blue-500">Cookie Policy</Link>
             </div>
             <p>&copy; {new Date().getFullYear()} Cowema Jobs. All rights reserved.</p>
           </div>

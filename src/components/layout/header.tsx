@@ -1,7 +1,9 @@
-import { Button } from '@/components/ui/button';
-import { BriefcaseIcon, UserIcon, BuildingIcon } from 'lucide-react';
-import Link from 'next/link';
-import { useAuthStore } from '@/lib/store';
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { BriefcaseIcon, UserIcon, BuildingIcon } from "lucide-react";
+import Link from "next/link";
+import { useAuthStore } from "@/lib/store";
 
 export function Header() {
   const { user, isAuthenticated, setUser } = useAuthStore();
@@ -21,42 +23,75 @@ export function Header() {
         {isAuthenticated ? (
           <>
             <nav className="hidden space-x-6 md:flex">
-              {user?.role === 'recruiter' ? (
+              {user?.role === "recruiter" ? (
                 <>
-                  <Link href="/candidates/matches" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/candidates/matches"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Daily Talent Match
                   </Link>
-                  <Link href="/candidates/find" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/candidates/find"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Find Talent
                   </Link>
-                  <Link href="/jobs/post" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/jobs/post"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Post Job
                   </Link>
-                  <Link href="/applications" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/applications"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Applications
                   </Link>
-                  <Link href="/dashboard" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/dashboard"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Dashboard
                   </Link>
                 </>
               ) : (
                 <>
-                  <Link href="/matches" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/matches"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Daily Matches
                   </Link>
-                  <Link href="/jobs/find" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/jobs/find"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Find Jobs
                   </Link>
-                  <Link href="/skills" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/skills"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Skills Assessment
                   </Link>
-                  <Link href="/applications" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/applications"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Applications
                   </Link>
-                  <Link href="/interviews" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/interviews"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Interviews
                   </Link>
-                  <Link href="/dashboard" className="text-gray-600 hover:text-gray-900">
+                  <Link
+                    href="/dashboard"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
                     Dashboard
                   </Link>
                 </>
@@ -83,10 +118,10 @@ export function Header() {
             </nav>
             <div className="flex items-center space-x-4">
               <Button variant="outline" size="sm" asChild>
-                <Link href="/login">Login</Link>
+                <Link href="/auth/login">Login</Link>
               </Button>
               <Button size="sm" asChild>
-                <Link href="/register">Register</Link>
+                <Link href="/auth/register">Register</Link>
               </Button>
             </div>
           </>

@@ -75,7 +75,7 @@ export function ResetPasswordPage() {
                     We've sent password reset instructions to your email address.
                   </p>
                   <Button asChild className="w-full">
-                    <Link to="/login">Return to Login</Link>
+                    <Link to="/auth/login">Return to Login</Link>
                   </Button>
                 </div>
               ) : (
@@ -109,7 +109,7 @@ export function ResetPasswordPage() {
 
                   <p className="text-center text-sm text-gray-600">
                     Remember your password?{' '}
-                    <Link to="/login" className="font-medium text-blue-600 hover:text-blue-500">
+                    <Link to="/auth/login" className="font-medium text-blue-600 hover:text-blue-500">
                       Sign in
                     </Link>
                   </p>

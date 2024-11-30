@@ -20,7 +20,7 @@ export async function middleware(request: NextRequest) {
   );
 
   if (isProtectedPath && !session) {
-    const redirectUrl = new URL('/login', request.url);
+    const redirectUrl = new URL('/auth/login', request.url);
     redirectUrl.searchParams.set('from', request.nextUrl.pathname);
     return NextResponse.redirect(redirectUrl);
   }

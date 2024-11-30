@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export function RecruiterHeroSection() {
   return (
@@ -24,10 +24,10 @@ export function RecruiterHeroSection() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100" asChild>
-              <Link to="/register">Post a Job</Link>
+              <Link href="/register">Post a Job</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
-              <Link to="/candidates/find">Browse Talent</Link>
+              <Link href="/candidates/find">Browse Talent</Link>
             </Button>
           </div>
           

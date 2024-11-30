@@ -18,7 +18,7 @@ export function VerifyEmailPage() {
       if (user?.emailVerified) {
         navigate('/dashboard');
       } else if (!user) {
-        navigate('/login');
+        navigate('/auth/login');
       }
     });
 

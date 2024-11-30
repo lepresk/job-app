@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import { MapPinIcon, BriefcaseIcon, ClockIcon } from 'lucide-react';
+import Link from 'next/link';
 
 const recentJobs = [
   {
@@ -83,7 +83,7 @@ export function RecentJobsSection() {
               </div>
 
               <Button variant="outline" className="w-full" asChild>
-                <Link to={`/jobs/${job.id}`}>View Details</Link>
+                <Link href={`/jobs/${job.id}`}>View Details</Link>
               </Button>
             </div>
           ))}
@@ -91,7 +91,7 @@ export function RecentJobsSection() {
 
         <div className="text-center">
           <Button size="lg" asChild>
-            <Link to="/jobs/find">View All Jobs</Link>
+            <Link href="/jobs/find">View All Jobs</Link>
           </Button>
         </div>
       </div>

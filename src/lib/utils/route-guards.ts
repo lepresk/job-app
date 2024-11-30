@@ -5,11 +5,11 @@ export async function protectedPage() {
   try {
     const user = await auth.currentUser;
     if (!user) {
-      redirect('/login');
+      redirect('/auth/login');
     }
     return user;
   } catch (error) {
-    redirect('/login');
+    redirect('/auth/login');
   }
 }
 
